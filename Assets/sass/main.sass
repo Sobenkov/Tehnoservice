@@ -1,0 +1,61 @@
+@import "reset"
+@import "colors"
+
+
+html
+	font-size: 10px
+
+body
+	font-size: 14px
+	margin: 0
+	color: $dark
+	font-family: 'Roboto', sans-serif
+	padding: 0
+a
+	color: $active_color
+.container
+	min-width: 80%
+	padding: 0
+
+// ===================================header=======================================
+
+.top-nav
+	display: flex
+	background: $active-color
+	position: relative
+	box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.22)
+.logo-png
+	height: 60px
+	width: 200px
+	margin-top: 5px
+	margin-left: 150px
+.head-menu
+	text-align: right
+	list-style: none
+	display: flex
+	padding: 0
+	li
+		margin-top: 10px
+		margin-right: 30px
+		&:first-child
+			margin-left: 600px
+		a
+			text-decoration: none
+			font-size: 18px
+			text-transform: uppercase
+			color: $white
+			transition: all 0.2s ease
+			&:hover
+				text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #0000ff, 0 0 80px #0000ff, 0 0 90px #0000ff,0 0 100px #0000ff
+
+// ==================================slider========================================
+
+.head-slider
+	.slider-img
+		max-width: 100%
+	.slider-text
+		font-size: 18px
+		position: absolute
+
+// ===================================content=======================================
+
