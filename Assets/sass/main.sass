@@ -1,5 +1,7 @@
 @import "reset"
 @import "colors"
+@import "fontello"
+
 
 
 html
@@ -14,9 +16,11 @@ body
 	background-color: $body-color
 a
 	color: $active_color
-
 .container
 	min-width: 75%
+	padding: 0
+.row 
+	margin: 0
 	padding: 0
 
 // ===================================header=======================================
@@ -26,15 +30,12 @@ a
 	background: $active-color
 	position: relative
 	box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.22)
-
-.logo-png
-	height: 60px
-	width: 200px
-	margin-top: 5px
-	margin-left: 260px
-
-.head-menu
-	text-align: right
+	&-logo-png
+		height: 60px
+		width: 200px
+		margin-top: 5px
+		margin-left: 260px
+.top-nav-menu
 	list-style: none
 	display: flex
 	padding: 0
@@ -43,7 +44,7 @@ a
 		margin-right: 30px
 		font-weight: 700
 		&:first-child
-			margin-left: 485px
+			margin-left: 445px
 		a
 			text-decoration: none
 			font-size: 18px
@@ -55,49 +56,44 @@ a
 
 // ==================================slider========================================
 
-.head-slider
+.slider_intro
 	position: relative
-
-.slider-img
-	height: 600px
-
-.slider-text
-	position: absolute
-	color: $white
-	margin-top: 150px
-	margin-left: 280px
-	width: 450px
-	min-height: 40px
-	background: $active-color
-	box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.22)
-	p
-		padding: 20px
-		font-size: 16px
-
+	max-width: 100%
+	img
+		height: 600px
+	&-text
+		position: absolute
+		color: $white
+		margin-top: 150px
+		margin-left: 280px
+		width: 480px
+		min-height: 40px
+		background: $active-color
+		box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.22)
+		p
+			padding: 20px
+			font-size: 16px
 .slick-dots
 	position: absolute
 	display: flex
 	list-style: none
 	left: 240px
 	top: 550px
-
-.slick-dots li
-	margin: 0 4px	
-
-.slick-dots button
-	width: 60px
-	height: 5px
-	padding: 0
-	font-size: 0
-	background-color: $white
-	border: 1
-	border-width: 1px
-	border-color: $white
-	cursor: pointer
-	opacity: 2
-	&:focus
-		outline: 0
-
+	li
+		margin: 0 4px	
+	button
+		width: 60px
+		height: 5px
+		padding: 0
+		font-size: 0
+		background-color: $white
+		border: 1
+		border-width: 1px
+		border-color: $white
+		cursor: pointer
+		opacity: 2
+		&:focus
+			outline: 0
 .slick-active 
 	button	
 		height: 7px
@@ -108,97 +104,156 @@ a
 // ===================================main=======================================
 
 .main
-	padding-top: 25px
+	padding: 35px 0
 	a
 		text-decoration: none
 		color: $dark
 		font-weight: 700
-
 	h2
 		list-style: none
 		text-transform: uppercase
 		font-weight: 700
 	ul
+		margin: 0
 		padding: 0
-		
-	li
-		list-style: none
-		padding: 6px 0
-
-	&-service
-		margin-left: 60px
-		background-color: $white
+		li
+			list-style: none
+			padding: 10px 0 10px 20px
+			margin: 2px 0 2px 0
+	&-content
+		padding: 0
+		margin-left: 45px
 		h2
+			padding: 8px
+			margin: 0
 			color: $white
 			background-color: $active_color
-			padding: 10px
 			text-align: center
 			font-size: 26px
-			transition: all 0.1s ease
+			transition: all 0.2s ease
 			&:hover
 				color: $white
 				text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 30px $neon, 0 0 40px $neon, 0 0 50px $neon,0 0 60px $neon
-
 		li
 			transition: all 0.2s ease
 			&:hover
 				background-color: $active_color
-				padding-left: 30px
+				padding-left: 40px
 		a
 			transition: all 0.1s ease
 			&:hover
 				text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
 				color: $white
 
+	&-service
+		background-color: $white
+	&-catalog
+		margin-top: 35px
+		background-color: $white
 	&-info
 		margin-left: 25px
-		background-color: $white
 		h2	
 			color: $active-color
 			font-size: 26px
-			margin-bottom: 30px
-		p
-			
-.info-logo
-	position: relative
-	padding-left: 50px
-	float: right
-	height: 200px
-	margin: 15px
-
-.main-btn
-	text-align: center
-	margin-top: 55px
-	margin-bottom: 60px
-
-.btn
-	text-align: center
-	justify-content: center
-	border: 2px solid $active_color
-	padding: 15px
-	position: relative
-	background-color: $white
-	color: $active_color
-	text-transform: uppercase
-	transition: all 0.2s ease
-	border-radius: 10px
-	font-weight: 700
-	&:hover
-		background-color: $active_color
-		text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
-		color: $white
-
-// ===================================sloder project========================================
-
-.main-slider
-	&-content
-		justify-content: center
+	&-teh
+		background-color: $white
+		padding: 20px	
+		h2 
+			margin: 0
+			font-size: 30px	
+	&-logo
+		position: relative
+		float: right
+		height: 200px
+		margin: 15px
+	&-btn
 		text-align: center
-		margin: 0 30px
+		margin: 55px 0px
+		&-primary
+			text-align: center
+			justify-content: center
+			border: 2px solid $active_color
+			padding: 15px
+			position: relative
+			background-color: $white
+			color: $active_color
+			text-transform: uppercase
+			transition: all 0.2s ease
+			border-radius: 10px
+			font-weight: 700
+			&:hover
+				background-color: $active_color
+				text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
+				color: $white
+		
+// ===================================slider project========================================
+.slider_project
+	flex-wrap:wrap
+	display: flex
+	height: 100px
+	top: -30px
+	&-content
+		text-align: center
+		display: flex
+		margin: 20px
+		display: flex
 		img
+			height: 300px
+			width: 270px
+		h3
+			color: $active_color
+.icon-right-open-1
+	position: relative
+	bottom: 322px
+	left: 915px
+	color: $white
+	font-size: 40px
+	font-weight: bold
+	text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
+	cursor: pointer
+.icon-left-open-1
+	position: relative
+	top: 200px
+	right: 40px
+	color: $white
+	font-size: 40px
+	font-weight: bold
+	text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
+	cursor: pointer
 
-.content-title
-	margin-top: 15px
+// ====================================footer================================================
 
-.content-text
-	margin-top: 15px
+.footer
+	margin-top: 45px
+	background-color: $dark
+	color: $footer-text
+	font-size: 16px
+	a 
+		text-decoration: none
+		color: $active-color
+		font-size: 16px
+		transition: all 0.2s ease
+		&:hover
+			color: $white
+			text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
+
+	li
+		list-style: none
+	&-content
+		padding: 30px 0 30px 0		
+	&-slot_1
+		padding-left: 290px
+	&-slot_2				
+		text-align: center
+	&-social_links
+		display: flex
+		text-align: center
+		padding-left: 255px
+		a 
+			font-size: 25px	
+	&-slot_3
+		text-align: right
+		padding-right: 290px
+		margin-bottom: 20px
+
+			

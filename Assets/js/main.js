@@ -1,5 +1,5 @@
 
-$('.head-slider').slick({
+$('#sliderHead').slick({
   dots: true,
   infinite: true,
   speed: 300,
@@ -10,8 +10,10 @@ $('.head-slider').slick({
   	fade: true,
 });
 
-$('.main-slider').slick({
+$('#sliderProject').slick({
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  nextArrow: '<i class="icon-right-open-1" aria-hidden="true"></i>',
+  prevArrow: '<i class="icon-left-open-1" aria-hidden="true"></i>',
 });
