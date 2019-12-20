@@ -11,7 +11,7 @@ body
 	font-size: 14px
 	margin: 0
 	color: $dark
-	font-family: 'Roboto', sans-serif
+	font-family: 'Play', sans-serif
 	padding: 0
 	background-color: $body-color
 a
@@ -30,29 +30,44 @@ a
 	background: $active-color
 	position: relative
 	box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.22)
+	h1
+		position: relative
+		margin: 0
+		padding-top: 15px
+		font-size: 26px
+		text-transform: uppercase
+		color: $white
+		font-weight: bold
 	&-logo-png
 		height: 60px
-		width: 200px
-		margin-top: 5px
+		float: left
 		margin-left: 260px
-.top-nav-menu
-	list-style: none
-	display: flex
-	padding: 0
-	li
-		margin-top: 10px
-		margin-right: 30px
-		font-weight: 700
-		&:first-child
-			margin-left: 445px
-		a
-			text-decoration: none
-			font-size: 18px
-			text-transform: uppercase
-			color: $white
-			transition: all 0.2s ease
-			&:hover
-				text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
+	&-menu
+		position: relative
+		list-style: none
+		display: flex
+		padding: 0
+		li
+			margin-top: 7px
+			margin-right: 30px
+			font-weight: 700
+			a
+				text-decoration: none
+				font-size: 16px
+				text-transform: uppercase
+				color: $white
+				transition: all 0.2s ease
+				&:hover
+					text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
+	&-btn
+		display: none
+		font-size: 25px
+		cursor: pointer
+		color: $white
+		text-align: right
+		padding: 10px 0 10px 30px
+		&:hover
+			text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon	
 
 // ==================================slider========================================
 
@@ -62,6 +77,8 @@ a
 	img
 		height: 600px
 	&-text
+		font-family: 'Roboto', sans-serif
+		font-style: italic
 		position: absolute
 		color: $white
 		margin-top: 150px
@@ -73,6 +90,7 @@ a
 		p
 			padding: 20px
 			font-size: 16px
+			font-weight: italic
 .slick-dots
 	position: absolute
 	display: flex
@@ -144,12 +162,21 @@ a
 			&:hover
 				text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
 				color: $white
-
 	&-service
 		background-color: $white
+		i 
+			display: none
+			font-size: 25px
+			margin-top: -22px
+			text-align: right
 	&-catalog
 		margin-top: 35px
 		background-color: $white
+		i 
+			display: none
+			font-size: 25px
+			margin-top: -22px
+			text-align: right
 	&-info
 		margin-left: 25px
 		h2	
@@ -159,8 +186,11 @@ a
 		background-color: $white
 		padding: 20px	
 		h2 
-			margin: 0
-			font-size: 30px	
+			text-align: center
+			margin: 5px 0 15px 0
+			font-size: 26px
+		p 
+			font-family: 'Roboto', sans-serif
 	&-logo
 		position: relative
 		float: right
@@ -187,34 +217,25 @@ a
 				color: $white
 		
 // ===================================slider project========================================
+
 .slider_project
-	flex-wrap:wrap
-	display: flex
-	height: 100px
-	top: -30px
 	&-content
+		width: 400px
 		text-align: center
-		display: flex
-		margin: 20px
-		display: flex
+		justify-content: center
+		margin: 0 40px 0 40px
 		img
-			height: 300px
-			width: 270px
+			width: 100%
 		h3
 			color: $active_color
+		p 
+			font-family: 'Roboto', sans-serif
 .icon-right-open-1
-	position: relative
-	bottom: 322px
-	left: 915px
-	color: $white
-	font-size: 40px
-	font-weight: bold
-	text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
-	cursor: pointer
+
 .icon-left-open-1
+
+.icon-down-open-1
 	position: relative
-	top: 200px
-	right: 40px
 	color: $white
 	font-size: 40px
 	font-weight: bold
@@ -224,6 +245,7 @@ a
 // ====================================footer================================================
 
 .footer
+	position:relative
 	margin-top: 45px
 	background-color: $dark
 	color: $footer-text
@@ -250,10 +272,11 @@ a
 		text-align: center
 		padding-left: 255px
 		a 
-			font-size: 25px	
+			font-size: 26px	
 	&-slot_3
 		text-align: right
 		padding-right: 290px
-		margin-bottom: 20px
 
-			
+//=====================================adaptiv======================================================
+
+@import "media"
