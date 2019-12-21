@@ -40,8 +40,12 @@ $('#sliderProject').slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 1,
+  dots: false,
+  arrows: false,
   nextArrow: '<i class="icon-right-open-1" aria-hidden="true"></i>',
   prevArrow: '<i class="icon-left-open-1" aria-hidden="true"></i>',
+  autoplay: true,
+    autoplaySpeed: 5000,
   responsive: [
           {
           breakpoint: 600,

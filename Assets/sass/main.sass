@@ -41,24 +41,24 @@ a
 	&-logo-png
 		height: 60px
 		float: left
-		margin-left: 260px
+		margin-left: 200px
 	&-menu
 		position: relative
 		list-style: none
 		display: flex
 		padding: 0
+		justify-content: center
 		li
 			margin-top: 7px
 			margin-right: 30px
 			font-weight: 700
+			color: $white
+			font-size: 16px
+			text-transform: uppercase
+			&:hover
+				text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
 			a
-				text-decoration: none
-				font-size: 16px
-				text-transform: uppercase
-				color: $white
-				transition: all 0.2s ease
-				&:hover
-					text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
+				text-decoration: none	
 	&-btn
 		display: none
 		font-size: 25px
@@ -82,7 +82,7 @@ a
 		position: absolute
 		color: $white
 		margin-top: 150px
-		margin-left: 280px
+		margin-left: 240px
 		width: 480px
 		min-height: 40px
 		background: $active-color
@@ -95,7 +95,7 @@ a
 	position: absolute
 	display: flex
 	list-style: none
-	left: 240px
+	left: 200px
 	top: 550px
 	li
 		margin: 0 4px	
@@ -122,7 +122,7 @@ a
 // ===================================main=======================================
 
 .main
-	padding: 35px 0
+	padding-top: 35px
 	a
 		text-decoration: none
 		color: $dark
@@ -140,7 +140,6 @@ a
 			margin: 2px 0 2px 0
 	&-content
 		padding: 0
-		margin-left: 45px
 		h2
 			padding: 8px
 			margin: 0
@@ -178,7 +177,6 @@ a
 			margin-top: -22px
 			text-align: right
 	&-info
-		margin-left: 25px
 		h2	
 			color: $active-color
 			font-size: 26px
@@ -215,32 +213,29 @@ a
 				background-color: $active_color
 				text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
 				color: $white
+
+	.icon-down-open-1
+		position: relative
+		color: $white
+		font-size: 40px
+		font-weight: bold
+		text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
+		cursor: pointer
 		
 // ===================================slider project========================================
 
 .slider_project
+	margin-top: 35px
+	text-align: center
 	&-content
-		width: 400px
-		text-align: center
-		justify-content: center
-		margin: 0 40px 0 40px
+		margin: 0 20px 0 20px
 		img
 			width: 100%
 		h3
 			color: $active_color
 		p 
 			font-family: 'Roboto', sans-serif
-.icon-right-open-1
-
-.icon-left-open-1
-
-.icon-down-open-1
-	position: relative
-	color: $white
-	font-size: 40px
-	font-weight: bold
-	text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
-	cursor: pointer
+			text-align: center		
 
 // ====================================footer================================================
 
@@ -258,24 +253,22 @@ a
 		&:hover
 			color: $white
 			text-shadow: 0 0 5px $neon, 0 0 10px $white, 0 0 20px $neon, 0 0 50px $neon, 0 0 90px $neon, 0 0 100px $neon,0 0 110px $neon
-
 	li
 		list-style: none
 	&-content
 		padding: 30px 0 30px 0		
 	&-slot_1
-		padding-left: 290px
+		justify-content: center
 	&-slot_2				
 		text-align: center
 	&-social_links
 		display: flex
-		text-align: center
-		padding-left: 255px
+		justify-content: center
 		a 
 			font-size: 26px	
 	&-slot_3
 		text-align: right
-		padding-right: 290px
+		justify-content: center
 
 //=====================================adaptiv======================================================
 
